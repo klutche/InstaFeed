@@ -2,24 +2,29 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>InstaFeed</title>
 <link rel="stylesheet" href="css/style.css">
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/instafeed.min.js"></script>
 <script type="text/javascript">
-$(function(){
-	var feed = new Instafeed({
-		get: 'tagged',
-		tagName: 'ダム',
-		clientId: '20c8ded6d0fa4165ab61554d2368029f'
-	});
-	feed.run();
+var feed = new Instafeed({
+	get: 'tagged',
+	tagName: '堰堤',
+	sortBy: 'random',
+	resolution: 'low_resolution',
+	limit: '30',
+	template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" width="150"></a></li>',
+	clientId: '20c8ded6d0fa4165ab61554d2368029f'
 });
+feed.run();
 </script>
 </head>
 <body>
 
-<div id="instafeed"></div>
+<h1>Dams in Instagram</h1>
+
+<ul id="instafeed" class="clearfix"></ul>
 
 </body>
 </html>

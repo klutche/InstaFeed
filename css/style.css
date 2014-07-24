@@ -73,7 +73,63 @@ a: hover, a: focus, a: active {
  ************************************************************/
 
 body {
-	color: #000;
+	color: #555;
 	font-size: 14px;
+	font-family: sans-serif;
 	background: #f5f5f5;
+}
+
+h1 {
+	color: #999;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+}
+
+ul {
+	width: 800px;
+	margin: 0 auto;
+	padding: 40px 40px 30px 30px;
+	overflow: hidden;
+	clear: both;
+	background: #fff;
+	border: solid 1px #ccc;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 1120px) {
+	ul {
+		width: 1120px;
+	}
+}
+@media screen and (max-width: 640px) {
+	ul {
+		width: 310px;
+		padding: 5px 5px 0 0;
+		border: none;
+	}
+}
+
+li {
+	float: left;
+	margin: 0 0 10px 10px;
+}
+@media screen and (max-width: 640px) {
+	li {
+		margin: 0 0 5px 5px;
+	}
+}
+li img {
+	border-radius: 4px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+li img:hover {
+	opacity:0.5;
+	filter:alpha(opacity=50);
+	-ms-filter:"alpha(opacity=50)";
+	zoom:1;
 }
