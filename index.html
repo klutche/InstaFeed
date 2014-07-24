@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>InstaFeed</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/instafeed.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var feed = new Instafeed({
+		get: 'tagged',
+		tagName: 'dam',
+		clientId: '20c8ded6d0fa4165ab61554d2368029f'
+	});
+	feed.run();
+});
+</script>
+</head>
+<body>
+
+<div id="instafeed"></div>
+
+</body>
+</html>
